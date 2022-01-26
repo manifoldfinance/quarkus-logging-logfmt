@@ -1,0 +1,12 @@
+artifact: ${project.groupId}:${project.artifactId}:${project.version}
+name: Logging Logfmt
+metadata:
+  keywords:
+    - "logging"
+    - "logfmt"
+    - "formatter"
+  categories:
+    - "core"
+  status: "preview"
+  config:
+    - "quarkus.log.console.logfmt."

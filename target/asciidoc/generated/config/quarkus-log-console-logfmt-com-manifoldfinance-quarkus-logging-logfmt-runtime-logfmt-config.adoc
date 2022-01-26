@@ -1,0 +1,56 @@
+[.configuration-legend]
+icon:lock[title=Fixed at build time] Configuration property fixed at build time - All other configuration properties are overridable at runtime
+[.configuration-reference, cols="80,.^10,.^10"]
+|===
+
+h|[[quarkus-log-console-logfmt-com-manifoldfinance-quarkus-logging-logfmt-runtime-logfmt-config_configuration]]link:#quarkus-log-console-logfmt-com-manifoldfinance-quarkus-logging-logfmt-runtime-logfmt-config_configuration[Configuration property]
+
+h|Type
+h|Default
+
+a| [[quarkus-log-console-logfmt-com-manifoldfinance-quarkus-logging-logfmt-runtime-logfmt-config_quarkus.log.console.logfmt]]`link:#quarkus-log-console-logfmt-com-manifoldfinance-quarkus-logging-logfmt-runtime-logfmt-config_quarkus.log.console.logfmt[quarkus.log.console.logfmt]`
+
+[.description]
+--
+Determine whether to enable the Logfmt console formatting extension, which disables "normal" console formatting.
+--|boolean 
+|`true`
+
+
+a| [[quarkus-log-console-logfmt-com-manifoldfinance-quarkus-logging-logfmt-runtime-logfmt-config_quarkus.log.console.logfmt.date-format]]`link:#quarkus-log-console-logfmt-com-manifoldfinance-quarkus-logging-logfmt-runtime-logfmt-config_quarkus.log.console.logfmt.date-format[quarkus.log.console.logfmt.date-format]`
+
+[.description]
+--
+The date format to use. The special string "default" indicates that the default format should be used.
+--|string 
+|`default`
+
+
+a| [[quarkus-log-console-logfmt-com-manifoldfinance-quarkus-logging-logfmt-runtime-logfmt-config_quarkus.log.console.logfmt.exception-output-type]]`link:#quarkus-log-console-logfmt-com-manifoldfinance-quarkus-logging-logfmt-runtime-logfmt-config_quarkus.log.console.logfmt.exception-output-type[quarkus.log.console.logfmt.exception-output-type]`
+
+[.description]
+--
+The exception output type to specify.
+--|`detailed`, `formatted`, `detailed-and-formatted` 
+|`detailed`
+
+
+a| [[quarkus-log-console-logfmt-com-manifoldfinance-quarkus-logging-logfmt-runtime-logfmt-config_quarkus.log.console.logfmt.zone-id]]`link:#quarkus-log-console-logfmt-com-manifoldfinance-quarkus-logging-logfmt-runtime-logfmt-config_quarkus.log.console.logfmt.zone-id[quarkus.log.console.logfmt.zone-id]`
+
+[.description]
+--
+The zone ID to use. The special string "default" indicates that the default zone should be used.
+--|string 
+|`default`
+
+
+a| [[quarkus-log-console-logfmt-com-manifoldfinance-quarkus-logging-logfmt-runtime-logfmt-config_quarkus.log.console.logfmt.print-details]]`link:#quarkus-log-console-logfmt-com-manifoldfinance-quarkus-logging-logfmt-runtime-logfmt-config_quarkus.log.console.logfmt.print-details[quarkus.log.console.logfmt.print-details]`
+
+[.description]
+--
+Enable printing of more details in the log. 
+ Printing the details can be expensive as the values are retrieved from the caller. The details include the source class name, source file name, source method name and source line number.
+--|boolean 
+|`false`
+
+|===

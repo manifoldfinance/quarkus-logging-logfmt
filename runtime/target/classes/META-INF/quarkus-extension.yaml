@@ -1,0 +1,16 @@
+---
+artifact: "com.manifoldfinance.quarkus:quarkus-logging-logfmt::jar:1.0.0-SNAPSHOT"
+name: "Logging Logfmt"
+metadata:
+  keywords:
+  - "logging"
+  - "logfmt"
+  - "formatter"
+  categories:
+  - "core"
+  status: "preview"
+  config:
+  - "quarkus.log.console.logfmt."
+  built-with-quarkus-core: "2.6.3.Final"
+  extension-dependencies:
+  - "io.quarkus:quarkus-core"

@@ -1,0 +1,10 @@
+com/manifoldfinance/quarkus/logging/logfmt/runtime/LogfmtConfig$$accessor.class
+com/manifoldfinance/quarkus/logging/logfmt/runtime/LoggingLogfmtRecorder.class
+com/manifoldfinance/quarkus/logging/logfmt/runtime/LogfmtFormatter.class
+com/manifoldfinance/quarkus/logging/logfmt/runtime/LogfmtGenerator.class
+com/manifoldfinance/quarkus/logging/logfmt/runtime/LogfmtException.class
+com/manifoldfinance/quarkus/logging/logfmt/runtime/LogfmtConfig.class
+com/manifoldfinance/quarkus/logging/logfmt/runtime/LogfmtMessages.class
+com/manifoldfinance/quarkus/logging/logfmt/runtime/LogfmtFormatter$FormatterLogfmtGenerator.class
+META-INF/quarkus-javadoc.properties
+META-INF/quarkus-config-roots.list
