@@ -25,7 +25,7 @@ public class LogfmtGenerator implements Flushable, Closeable {
     private StringBuilder writeKey(String key) {
         return builder
                 .append(" ")
-                .append(key.replaceAll(" ", "%"))
+                .append(key.replaceAll("[ .]", "_"))
                 .append("=");
     }
 
