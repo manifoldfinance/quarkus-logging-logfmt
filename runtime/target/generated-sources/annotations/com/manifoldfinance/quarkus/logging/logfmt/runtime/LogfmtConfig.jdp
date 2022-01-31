@@ -1,5 +1,5 @@
 #
-#Tue Jan 25 11:37:52 GMT 2022
+#Thu Jan 27 14:21:23 GMT 2022
 com.manifoldfinance.quarkus.logging.logfmt.runtime.LogfmtConfig.printDetails=Enable printing of more details in the log.\n<p>\nPrinting the details can be expensive as the values are retrieved from the caller. The details include the\nsource class name, source file name, source method name and source line number.
 com.manifoldfinance.quarkus.logging.logfmt.runtime.LogfmtConfig.exceptionOutputType=The exception output type to specify.
 com.manifoldfinance.quarkus.logging.logfmt.runtime.LogfmtConfig.zoneId=The zone ID to use. The special string "default" indicates that the default zone should be used.
