@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.manifoldfinance.quarkus</groupId>
     <artifactId>quarkus-logging-logfmt-parent</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
   </parent>
   <artifactId>quarkus-logging-logfmt</artifactId>
   <name>Quarkus Logging Logfmt - Runtime</name>
