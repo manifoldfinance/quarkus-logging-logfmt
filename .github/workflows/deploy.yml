@@ -20,6 +20,6 @@ jobs:
           java-version: 1.8
 
       - name: Deploy to GitHub
-        run: mvn --batch-mode -P release deploy
+        run: mvn --batch-mode -Prelease deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
