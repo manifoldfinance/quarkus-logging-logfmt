@@ -11,15 +11,12 @@
     <module>deployment</module>
     <module>runtime</module>
   </modules>
-  <properties>
-    <compiler-plugin.version>3.8.1</compiler-plugin.version>
-    <failsafe-plugin.version>${surefire-plugin.version}</failsafe-plugin.version>
-    <maven.compiler.release>11</maven.compiler.release>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <quarkus.version>2.6.3.Final</quarkus.version>
-    <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
-  </properties>
+  <scm>
+    <connection>scm:git:git@github.com:manifoldfinance/quarkus-logging-logfmt.git</connection>
+    <developerConnection>scm:git:git@github.com:manifoldfinance/quarkus-logging-logfmt.git</developerConnection>
+    <url>https://github.com/manifoldfinance/quarkus-logging-logfmt</url>
+    <tag>HEAD</tag>
+  </scm>
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -31,6 +28,26 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <properties>
+    <compiler-plugin.version>3.8.1</compiler-plugin.version>
+    <failsafe-plugin.version>${surefire-plugin.version}</failsafe-plugin.version>
+    <maven.compiler.release>11</maven.compiler.release>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <quarkus.version>2.6.3.Final</quarkus.version>
+    <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
+    <versions-plugin.version>2.7</versions-plugin.version>
+    <deploy-plugin.version>3.0.0-M1</deploy-plugin.version>
+    <source-plugin.version>3.2.0</source-plugin.version>
+    <javadoc-plugin.version>3.1.1</javadoc-plugin.version>
+  </properties>
   <build>
     <pluginManagement>
       <plugins>
@@ -70,7 +87,57 @@
             </compilerArgs>
           </configuration>
         </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>versions-maven-plugin</artifactId>
+          <version>${versions-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>${deploy-plugin.version}</version>
+          <configuration>
+            <deployAtEnd>true</deployAtEnd>
+            <retryFailedDeploymentCount>2</retryFailedDeploymentCount>
+          </configuration>
+        </plugin>
       </plugins>
     </pluginManagement>
   </build>
+
+  <profiles>
+    <profile>
+      <id>release</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-source-plugin</artifactId>
+            <version>${source-plugin.version}</version>
+            <executions>
+              <execution>
+                <id>attach-sources</id>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>${javadoc-plugin.version}</version>
+            <executions>
+              <execution>
+                <id>attach-javadocs</id>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 </project>
