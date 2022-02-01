@@ -17,6 +17,8 @@ hs_err_pid*
 ## Maven
 ##############################
 target/
+/runtime/target/
+/deployment/target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
@@ -115,8 +117,3 @@ terraform.tfstate.backup
 ## Nix
 ##############################
 /result*
-
-##############################
-## Q
-##############################
-/qdb
