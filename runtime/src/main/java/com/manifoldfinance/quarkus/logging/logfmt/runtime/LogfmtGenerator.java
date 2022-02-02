@@ -100,8 +100,6 @@ public class LogfmtGenerator implements Flushable, Closeable {
     private void flushBuffer() {
         try {
             if (builder.length() > 0) {
-                // add record delimiter
-                builder.append("\n");
                 // skip the leading space
                 writer.write(builder.toString(), 1, builder.length());
                 builder.delete(0, builder.length());
